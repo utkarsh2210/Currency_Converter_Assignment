@@ -14,6 +14,10 @@
   }
 }
 
+.countryCurrenyNames {
+  overflow-y: scroll;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -37,3 +41,34 @@
     transform: rotate(360deg);
   }
 }
+.instuction-symbol {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+.instruction-text {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 23%;
+  border: 1px solid #000;
+  word-break: normal;
+  margin-top: 0;
+  padding-top: 0;
+  max-width: 150px;
+  font-size: 11px;
+  background-color: wheat;
+}
+.instuction-symbol:hover ~ .instruction-text {
+  display: block;
+}
+
+FIELDSET {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .selectClass {
+  align-self: center;
+} */

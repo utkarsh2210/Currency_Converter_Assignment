@@ -12,8 +12,6 @@ function App() {
     currencies: [],
   });
 
-  // let valueArray = [];
-
   useEffect(() => {
     callAPI(baseCurrency);
   }, []);
@@ -47,15 +45,12 @@ function App() {
       }
     }
 
-    // valueArray = value;
+    if (value.length > 5) {
+      alert("Please Select upto 5 currencies!");
+      return;
+    }
     setConvertToCurrency(value);
   };
-
-  // const handleConversion = (e) => {
-  //   // e.preventDefault();
-  //   // console.log(valueArray);
-  //   // setConvertToCurrency(valueArray);
-  // };
 
   const changeBaseAmount = (e) => {
     setBaseAmount(e.target.value);
@@ -86,14 +81,18 @@ function App() {
         style={{ height: "100vh" }}
       >
         <div
-          className="p-4"
-          style={{ border: "1px solid black", width: "350px" }}
+          className="p-1 countryCurrenyNames"
+          style={{
+            border: "1px solid black",
+            minWidth: "350px",
+            maxHeight: "500px",
+          }}
         >
-          <CountryNames countryCurrencies={currencies} />
+          <CountryNames />
         </div>
         <div
           className="p-4"
-          style={{ border: "1px solid black", width: "350px" }}
+          style={{ border: "1px solid black", minWidth: "500px" }}
         >
           <CurrencyConversion
             baseCurrency={baseCurrency}
@@ -101,7 +100,6 @@ function App() {
             currencyChoice={currencyChoice}
             convertToCurrency={convertToCurrency}
             changeConvertToCurrency={changeConvertToCurrency}
-            // handleConversion={handleConversion}
             baseAmount={baseAmount}
             changeBaseAmount={changeBaseAmount}
             result={result}
