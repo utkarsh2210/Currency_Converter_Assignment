@@ -38,8 +38,8 @@ function CurrencyConversion({
               ? convertToCurrency + ","
               : convertToCurrency}
             <p className="instruction-text">
-              You Can Select upto 5 currencies<br></br>Press Ctrl while you
-              select multiple currencies
+              You can select upto 5 currencies<br></br>Press{" "}
+              <strong>Ctrl</strong> while you select multiple currencies
             </p>
           </h3>
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import CurrencyConversion from "./CurrencyConversion";
 import CountryNames from "./CountryNames";
+import CurrencyRates from "./CurrencyRates";
 
 function App() {
   const [baseCurrency, setBaseCurrency] = useState("GBP");
@@ -10,6 +11,7 @@ function App() {
   const [ratesAndCurrencies, setRatesAndCurrencies] = useState({
     rates: [],
     currencies: [],
+    apiResult: [],
   });
 
   useEffect(() => {
@@ -73,7 +75,8 @@ function App() {
     getConvertedCurrency(baseAmount, destCurrencies, rates)
   );
 
-  console.log(currencies);
+  console.log("ApiResult", ratesAndCurrencies.apiResult);
+
   return (
     <div className="App">
       <div
@@ -106,11 +109,14 @@ function App() {
           />
         </div>
         <div
-          className="p-4"
-          style={{ border: "1px solid black", width: "350px" }}
+          className="p-1 countryCurrenyNames"
+          style={{
+            border: "1px solid black",
+            minWidth: "350px",
+            maxHeight: "500px",
+          }}
         >
-          <p>23432423</p>
-          <p>dasdadasd213sd</p>
+          <CurrencyRates rates={rates} baseCurrency={baseCurrency} />
         </div>
       </div>
     </div>
