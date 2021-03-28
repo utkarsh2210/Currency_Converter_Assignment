@@ -12,8 +12,8 @@ function CurrencyRates({ baseCurrency, rates }) {
             <th colSpan="2">Base Currency : {baseCurrency}</th>
           </tr>
           <tr>
-            <th scope="col">Currency</th>
-            <th scope="col">Rate</th>
+            <th scope="col">CURRENCY</th>
+            <th scope="col">RATE</th>
           </tr>
         </thead>
         <tbody>

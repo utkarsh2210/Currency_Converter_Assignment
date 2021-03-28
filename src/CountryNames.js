@@ -36,16 +36,14 @@ const keys = [
   { countryName: "Malaysian Ringgit ", currencyName: "MYR" },
 ];
 
-console.log("KEYS", keys);
-
 function CountryNames() {
   return (
     <>
-      <table class="table table-striped">
+      <table className="table table-striped">
         <thead>
           <tr>
-            <th scope="col">Country</th>
-            <th scope="col">Currency</th>
+            <th scope="col">COUNTRY</th>
+            <th scope="col">CURRENCY</th>
           </tr>
         </thead>
         <tbody>

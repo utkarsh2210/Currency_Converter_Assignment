@@ -6,7 +6,6 @@ function CurrencyConversion({
   currencyChoice,
   convertToCurrency,
   changeConvertToCurrency,
-  handleConversion,
   baseAmount,
   changeBaseAmount,
   result,
@@ -17,10 +16,13 @@ function CurrencyConversion({
         <h3>Convert from: {baseCurrency}</h3>
         <fieldset>
           <select
-            className="selectClass"
             value={baseCurrency}
             onChange={changeBaseCurrency}
-            style={{ fontSize: "1rem", width: "100px" }}
+            style={{
+              fontSize: "1rem",
+              width: "100px",
+              backgroundColor: "rgb(246, 233, 210)",
+            }}
           >
             {currencyChoice}
             <option>{baseCurrency}</option>
@@ -44,10 +46,14 @@ function CurrencyConversion({
           </h3>
 
           <select
-            className="ui fluid selectClass"
+            className="ui fluid"
             multiple
             onChange={changeConvertToCurrency}
-            style={{ fontSize: "1rem", width: "100px" }}
+            style={{
+              fontSize: "1rem",
+              width: "100px",
+              backgroundColor: "rgb(246, 233, 210)",
+            }}
           >
             {currencyChoice}
           </select>
@@ -58,14 +64,14 @@ function CurrencyConversion({
           id="base-amount"
           defaultValue={baseAmount}
           onChange={changeBaseAmount}
-          style={{ fontSize: "15px" }}
+          style={{ fontSize: "15px", backgroundColor: "rgb(246, 233, 210)" }}
         ></input>
       </form>
 
       {convertToCurrency.map((converted, i) => (
-        <h3 id="result-text" key={i}>
-          {baseAmount} {baseCurrency} is equal to {result[i]} {converted}
-        </h3>
+        <p id="result-text" key={i}>
+          {baseAmount} {baseCurrency} = {result[i]} {converted}
+        </p>
       ))}
     </div>
   );
