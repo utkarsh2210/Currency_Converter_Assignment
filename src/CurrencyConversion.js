@@ -14,6 +14,7 @@ function CurrencyConversion({
     <div className="form-container">
       <form className="ui mini form">
         <h3>Convert from: {baseCurrency}</h3>
+
         <fieldset>
           <select
             value={baseCurrency}
@@ -40,7 +41,7 @@ function CurrencyConversion({
               ? convertToCurrency + ","
               : convertToCurrency}
             <p className="instruction-text">
-              You can select upto 5 currencies<br></br>Press{" "}
+              You can select upto 4 currencies<br></br>Press{" "}
               <strong>Ctrl</strong> while you select multiple currencies
             </p>
           </h3>
@@ -58,6 +59,7 @@ function CurrencyConversion({
             {currencyChoice}
           </select>
         </fieldset>
+
         <h3>Amount:</h3>
         <input
           type="number"
@@ -68,6 +70,7 @@ function CurrencyConversion({
         ></input>
       </form>
 
+      {/* To display the result of the currency conversion in case user selects multiple target currencies */}
       {convertToCurrency.map((converted, i) => (
         <p id="result-text" key={i}>
           {baseAmount} {baseCurrency} = {result[i]} {converted}

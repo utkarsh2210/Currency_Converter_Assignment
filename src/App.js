@@ -12,9 +12,9 @@ function App() {
   const [ratesAndCurrencies, setRatesAndCurrencies] = useState({
     rates: [],
     currencies: [],
-    apiResult: [],
   });
 
+  // Fetching the currencies and their exchange rates as soon as the component loads.
   useEffect(() => {
     getCurrencyData(baseCurrency);
   }, []);
@@ -39,6 +39,7 @@ function App() {
     getCurrencyData(e.target.value);
   };
 
+  // To combine the multiple values selected by the user
   const changeConvertToCurrency = (e) => {
     var options = e.target.options;
     var value = [];
@@ -48,6 +49,7 @@ function App() {
       }
     }
 
+    // User can select upto 4 target currencies
     if (value.length > 4) {
       alert("Please Select upto 4 currencies!");
       return;
@@ -59,7 +61,9 @@ function App() {
     setBaseAmount(e.target.value);
   };
 
+  // function to return the converted currency value from source to target currency
   const getConvertedCurrency = (baseAmount, convertToCurrency, rates) => {
+    // restricting the currency upto 2 decimal places
     return Number.parseFloat(baseAmount * rates[convertToCurrency]).toFixed(2);
   };
 

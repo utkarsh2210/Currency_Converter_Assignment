@@ -15,14 +15,6 @@
   }
 }
 
-.countryCurrenyNames {
-  overflow-y: scroll;
-  min-width: 300px;
-  max-height: 500px;
-  box-shadow: 0px 0px 12px 4px black;
-  background-color: wheat;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -46,11 +38,23 @@
     transform: rotate(360deg);
   }
 }
+
+/****************** Styling for the left and the right most divs with the currency table **********************/
+.countryCurrenyNames {
+  overflow-y: scroll;
+  min-width: 300px;
+  max-height: 500px;
+  box-shadow: 0px 0px 12px 4px black;
+  background-color: wheat;
+}
+
+/******************* Pop-up instruction based upon the hover event over the "i" tag **************************/
 .instuction-symbol {
   padding: 0;
   margin: 0;
   display: inline-block;
 }
+
 .instruction-text {
   display: none;
   position: absolute;
@@ -74,6 +78,8 @@
   background-color: wheat;
 }
 
+/*********************** Header Bar ***********************/
+
 .headerBar {
   background-color: rgb(12, 12, 12);
   height: max-content;
@@ -86,6 +92,7 @@
   font-size: 1.4rem;
 }
 
+/************************ Form Elements ****************************/
 FIELDSET {
   display: flex;
   flex-direction: column;
