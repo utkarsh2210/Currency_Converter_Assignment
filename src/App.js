@@ -47,8 +47,8 @@ function App() {
       }
     }
 
-    if (value.length > 5) {
-      alert("Please Select upto 5 currencies!");
+    if (value.length > 4) {
+      alert("Please Select upto 4 currencies!");
       return;
     }
     setConvertToCurrency(value);
@@ -59,7 +59,7 @@ function App() {
   };
 
   const getConvertedCurrency = (baseAmount, convertToCurrency, rates) => {
-    return Number.parseFloat(baseAmount * rates[convertToCurrency]).toFixed(3);
+    return Number.parseFloat(baseAmount * rates[convertToCurrency]).toFixed(2);
   };
 
   const { rates, currencies } = ratesAndCurrencies;
@@ -81,21 +81,53 @@ function App() {
     <div className="App">
       <div
         className="d-flex flex-row justify-content-around align-items-center"
+        style={{
+          backgroundColor: "black",
+          height: "50px",
+          boxShadow: "0px 0px 12px 4px black",
+        }}
+      >
+        <div className="mr-4" style={{ color: "wheat", fontSize: "1.4rem" }}>
+          COUNTRY NAMES<div className="d-flex flex-column"></div>
+          <i
+            style={{ color: "white" }}
+            className="fas fa-long-arrow-alt-down"
+          ></i>
+        </div>
+        <div className="mr-4" style={{ color: "wheat", fontSize: "1.4rem" }}>
+          CURRENCY CONVERTER
+        </div>
+        <div className="mr-4" style={{ color: "wheat", fontSize: "1.4rem" }}>
+          RATES<div className="d-flex flex-column"></div>
+          <i
+            style={{ color: "white" }}
+            className="fas fa-long-arrow-alt-down"
+          ></i>
+        </div>
+      </div>
+      <div
+        className="d-flex flex-row justify-content-around align-items-center"
         style={{ height: "100vh" }}
       >
         <div
           className="p-1 countryCurrenyNames"
           style={{
-            border: "1px solid black",
-            minWidth: "350px",
+            minWidth: "300px",
             maxHeight: "500px",
+            boxShadow: "0px 0px 12px 4px black",
+            backgroundColor: "wheat",
           }}
         >
           <CountryNames />
         </div>
+
         <div
           className="p-4"
-          style={{ border: "1px solid black", minWidth: "500px" }}
+          style={{
+            minWidth: "500px",
+            boxShadow: "0px 0px 12px 4px black",
+            backgroundColor: "wheat",
+          }}
         >
           <CurrencyConversion
             baseCurrency={baseCurrency}
@@ -108,12 +140,14 @@ function App() {
             result={result}
           />
         </div>
+
         <div
           className="p-1 countryCurrenyNames"
           style={{
-            border: "1px solid black",
-            minWidth: "350px",
+            minWidth: "300px",
             maxHeight: "500px",
+            boxShadow: "0px 0px 12px 4px black",
+            backgroundColor: "wheat",
           }}
         >
           <CurrencyRates rates={rates} baseCurrency={baseCurrency} />

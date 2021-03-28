@@ -21,7 +21,7 @@ function CurrencyRates({ baseCurrency, rates }) {
             return (
               <tr key={index}>
                 <td>{ele}</td>
-                <td>{currencyRate[index].toFixed(3)}</td>
+                <td>{currencyRate[index].toFixed(2)}</td>
               </tr>
             );
           })}

@@ -58,13 +58,14 @@ function CurrencyConversion({
           id="base-amount"
           defaultValue={baseAmount}
           onChange={changeBaseAmount}
+          style={{ fontSize: "15px" }}
         ></input>
       </form>
 
       {convertToCurrency.map((converted, i) => (
-        <h2 id="result-text" key={i}>
+        <h3 id="result-text" key={i}>
           {baseAmount} {baseCurrency} is equal to {result[i]} {converted}
-        </h2>
+        </h3>
       ))}
     </div>
   );
