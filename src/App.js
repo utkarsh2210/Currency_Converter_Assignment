@@ -28,7 +28,7 @@ function App() {
       .then((data) =>
         setRatesAndCurrencies({
           rates: data["rates"],
-          currencies: Object.keys(data["rates"]).sort(),
+          currencies: Object.keys(data["rates"]),
         })
       );
   };
@@ -78,14 +78,23 @@ function App() {
     getConvertedCurrency(baseAmount, destCurrencies, rates)
   );
 
-  console.log(result);
+  console.log(currencies);
   return (
     <div className="App">
-      <div class="ui three column doubling stackable grid container">
-        <div class="column" style={{ border: "1px solid black" }}>
-          <CountryNames />
+      <div
+        className="d-flex flex-row justify-content-around align-items-center"
+        style={{ height: "100vh" }}
+      >
+        <div
+          className="p-4"
+          style={{ border: "1px solid black", width: "350px" }}
+        >
+          <CountryNames countryCurrencies={currencies} />
         </div>
-        <div class="column" style={{ border: "1px solid black" }}>
+        <div
+          className="p-4"
+          style={{ border: "1px solid black", width: "350px" }}
+        >
           <CurrencyConversion
             baseCurrency={baseCurrency}
             changeBaseCurrency={changeBaseCurrency}
@@ -98,7 +107,10 @@ function App() {
             result={result}
           />
         </div>
-        <div class="column" style={{ border: "1px solid black" }}>
+        <div
+          className="p-4"
+          style={{ border: "1px solid black", width: "350px" }}
+        >
           <p>23432423</p>
           <p>dasdadasd213sd</p>
         </div>

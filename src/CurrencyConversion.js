@@ -15,16 +15,21 @@ function CurrencyConversion({
     <div className="form-container">
       <form className="ui mini form">
         <h3>Convert from: {baseCurrency}</h3>
-        <select value={baseCurrency} onChange={changeBaseCurrency}>
+        <select
+          value={baseCurrency}
+          onChange={changeBaseCurrency}
+          style={{ fontSize: "1rem", width: "100px" }}
+        >
           {currencyChoice}
           <option>{baseCurrency}</option>
         </select>
 
         <h3>Convert to: {convertToCurrency}</h3>
         <select
-          className="ui fluid dropdown"
+          className="ui fluid"
           multiple
           onChange={changeConvertToCurrency}
+          style={{ fontSize: "1rem", width: "100px" }}
         >
           {currencyChoice}
         </select>
