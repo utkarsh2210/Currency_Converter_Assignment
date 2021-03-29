@@ -1,3 +1,12 @@
+# Currency_Converter
+Convert whichever currency you wish to at a lighting speed along with an option to view conversion rates for all the currencies.
+
+
+Built Using React JS.
+
+## Screenshots
+<img src="https://github.com/utkarsh2210/Currency_Converter_Assignment/blob/master/public/scr1.PNG" width=800px><br><br><img src="https://github.com/utkarsh2210/Currency_Converter_Assignment/blob/master/public/scr2.PNG" width=800px><br><br><img src="https://github.com/utkarsh2210/Currency_Converter_Assignment/blob/master/public/scr3.PNG" width=800px>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
