@@ -1,5 +1,5 @@
 # Currency_Converter
-Convert whichever currency you wish to at a lighting speed along with an option to view conversion rates for all the currencies.
+Convert whichever currency you wish to at a lightning speed along with an option to view conversion rates for all the currencies.
 
 
 Built Using React JS.
